@@ -113,11 +113,11 @@ if __name__ == "__main__":
     df = pd.DataFrame(columns=['seed', 'actions'])
 
     results = 0
-    for seed in range(number_of_trials):
+    for seed in range(3944410000, 3944410000 + 100):
         print("Current trial {} result {}".format(seed, results))
         new_result, actions = find_solution(size=8, num_boxes=2, time_limit=20, seed=seed)
         results += new_result
-        df = df.append({'seed' : seed , 'actions' : actions} , ignore_index=True)
+        df = df.append({'seed' : seed, 'actions' : actions} , ignore_index=True)
 
 
     print("Number of solutions: {}".format(results))
